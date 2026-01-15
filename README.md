@@ -42,7 +42,6 @@ src/
 ### 1) Clonar o repositório
 
 git clone https://github.com/Cabuke/lista-de-compras.git
-cd lista-de-compras
 
 ### 2) Instalar dependências
 npm install
