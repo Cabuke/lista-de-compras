@@ -26,6 +26,7 @@ O projeto implementa uma **lista de compras com CRUD em memória**, leitura inic
 ────────────────────────────
 
 ## 🧩 Estrutura
+
 src/
 ├── assets/
 │ └── lista.txt → dados iniciais
