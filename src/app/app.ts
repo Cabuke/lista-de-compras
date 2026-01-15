@@ -59,7 +59,20 @@ export class App implements OnInit {
   }
 
   salvar() {
-    if (!this.nome || this.quantidade === null) return;
+    if (!this.nome && (this.quantidade === null || isNaN(this.quantidade))) {
+      alert('Informe o nome e a quantidade.');
+      return;
+    }
+
+    if (!this.nome) {
+      alert('Informe o nome do produto.');
+      return;
+    }
+
+    if (this.quantidade === null || isNaN(this.quantidade)) {
+      alert('Informe a quantidade do produto.');
+      return;
+    }
 
     try {
       if (this.editando) {
