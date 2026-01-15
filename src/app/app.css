@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8; /* cor suave */
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h3 {
+  margin-top: 0;
+}
+
+/* Blocos */
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Inputs */
+input {
+  padding: 6px 8px;
+  margin-right: 6px;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Layout principal */
+.linha-tabela {
+  display: flex;
+  gap: 15px;
+}
+
+.tabela-area {
+  flex: 3;
+}
+
+.resumo-area {
+  flex: 1;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 6px;
+  height: fit-content;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+}
+
+th {
+  background: #e9ecef;
+}
