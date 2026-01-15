@@ -26,7 +26,7 @@ O projeto implementa uma **lista de compras com CRUD em memória**, leitura inic
 ────────────────────────────
 
 ## 🧩 Estrutura
-\`\`\`
+```
 src/
 ├── assets/
 │ └── lista.txt → dados iniciais
@@ -35,7 +35,7 @@ src/
 │ ├── services/ → lógica de negócio
 │ ├── app.ts → componente principal
 │ └── app.spec.ts → testes
-\`\`\`
+```
 
 ────────────────────────────
 
