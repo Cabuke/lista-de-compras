@@ -15,6 +15,9 @@
     <input placeholder="ID" [(ngModel)]="filtroId">
     <input placeholder="Nome" [(ngModel)]="filtroNome">
     <input placeholder="Quantidade" [(ngModel)]="filtroQuantidade">
+    <p *ngIf="filtrados.length === 0" style="color: #b00020; margin-top: 8px;">
+      Nenhum produto encontrado com os filtros informados.
+    </p>
   </div>
 
 
