@@ -43,16 +43,16 @@ src/
 
 ### 1) Clonar o repositório
 
-git clone https://github.com/Cabuke/lista-de-compras.git
+`git clone` https://github.com/Cabuke/lista-de-compras.git
 
 ### 2) Instalar dependências
-npm install
+`npm install`
 
 ### 3) Rodar a aplicação
-ng serve
+`ng serve`
 
 ### 4) Abrir no navegador
-http://localhost:4200
+`http://localhost:4200`
 
 
 ────────────────────────────
