@@ -8,8 +8,8 @@ O projeto implementa uma **lista de compras com CRUD em memória**, leitura inic
 
 ## ✨ Funcionalidades
 
-✔ Carregamento inicial a partir de `lista.txt`  
-✔ CRUD completo em memória  
+✔ Leitura inicial de `assets/lista.txt`   
+✔ CRUD completo em memória (Adicionar, Editar, Remover)
 ✔ ID incremental automático  
 ✔ Não permite nomes duplicados (case insensitive)  
 ✔ Campo quantidade apenas numérico  
@@ -28,11 +28,12 @@ O projeto implementa uma **lista de compras com CRUD em memória**, leitura inic
 ## 🧩 Estrutura
 src/
 ├── assets/
-│ └── lista.txt → carga inicial
+│ └── lista.txt → dados iniciais
 ├── app/
-│ ├── models/ → tipagem
-│ ├── services/ → regras de negócio
-│ └── app.ts → componente principal
+│ ├── models/ → interfaces de tipo
+│ ├── services/ → lógica de negócio
+│ ├── app.ts → componente principal
+│ └── app.spec.ts → testes
 
 
 ────────────────────────────
@@ -55,23 +56,33 @@ http://localhost:4200
 
 ────────────────────────────
 
-🧪 O que pode ser testado
+🧪 Testes
+
+O projeto inclui testes automatizados para:
+
+- Regras do ProdutoService
+
+- Criação básica do componente principal (App)
+
+Rodando os testes
+
+`ng test`
+
+O Angular executa os testes em um navegador controlado.
+
+O que testar manualmente
 
 - Inserir produto com nome e quantidade
 
-- Bloqueio ao tentar salvar apenas um dos campos
+- Validação de campos obrigatórios
 
-- Bloqueio de nomes duplicados (ex: "Banana" e "banana")
+- Evitar inserção de nomes duplicados
 
-- Editar produto com feedback
+- Filtrar com resultados e sem resultados
 
-- Remover produto com confirmação
+- Somatório de quantidades
 
-- Filtrar por ID, nome e quantidade
-
-- Ver total de produtos
-
-- Ver soma total das quantidades
+- Confirmação ao excluir
 
 🎯 Objetivo
 
@@ -89,7 +100,7 @@ http://localhost:4200
 
 ────────────────────────────
 
-🧠 Observação
+📌 Observação
 
 Todos os dados são mantidos apenas em memória.
 Ao recarregar a página, a lista volta para o estado inicial definido em **lista.txt**.
