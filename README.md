@@ -1,59 +1,101 @@
-# ListaDeCompras
+# 🛒 Lista de Compras – Teste Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.0.
+Aplicação desenvolvida como teste técnico em Angular, com foco em simplicidade, clareza e cumprimento integral dos requisitos propostos.
 
-## Development server
+O projeto implementa uma **lista de compras com CRUD em memória**, leitura inicial de dados via arquivo estático e regras de validação.
 
-To start a local development server, run:
+────────────────────────────
 
-```bash
+## ✨ Funcionalidades
+
+✔ Carregamento inicial a partir de `lista.txt`  
+✔ CRUD completo em memória  
+✔ ID incremental automático  
+✔ Não permite nomes duplicados (case insensitive)  
+✔ Campo quantidade apenas numérico  
+✔ Confirmação ao excluir  
+✔ Feedback a cada ação (criar, editar, remover)  
+✔ Filtros por:
+- ID  
+- Nome  
+- Quantidade  
+✔ Exibição de:
+- Total de produtos  
+- Soma total das quantidades  
+
+────────────────────────────
+
+## 🧩 Estrutura
+src/
+├── assets/
+│ └── lista.txt → carga inicial
+├── app/
+│ ├── models/ → tipagem
+│ ├── services/ → regras de negócio
+│ └── app.ts → componente principal
+
+
+────────────────────────────
+
+## 🚀 Como rodar o projeto
+
+### 1) Clonar o repositório
+
+git clone https://github.com/Cabuke/lista-de-compras.git
+cd lista-de-compras
+
+### 2) Instalar dependências
+npm install
+
+### 3) Rodar a aplicação
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 4) Abrir no navegador
+http://localhost:4200
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+────────────────────────────
 
-```bash
-ng generate component component-name
-```
+🧪 O que pode ser testado
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Inserir produto com nome e quantidade
 
-```bash
-ng generate --help
-```
+- Bloqueio ao tentar salvar apenas um dos campos
 
-## Building
+- Bloqueio de nomes duplicados (ex: "Banana" e "banana")
 
-To build the project run:
+- Editar produto com feedback
 
-```bash
-ng build
-```
+- Remover produto com confirmação
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Filtrar por ID, nome e quantidade
 
-## Running unit tests
+- Ver total de produtos
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Ver soma total das quantidades
 
-```bash
-ng test
-```
+🎯 Objetivo
 
-## Running end-to-end tests
+- Projeto criado para demonstrar:
 
-For end-to-end (e2e) testing, run:
+- Organização de código Angular
 
-```bash
-ng e2e
-```
+- Separação de responsabilidades
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Leitura e transformação de dados
 
-## Additional Resources
+- Validações de negócio
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Simplicidade e clareza de UI/UX
+
+────────────────────────────
+
+🧠 Observação
+
+Todos os dados são mantidos apenas em memória.
+Ao recarregar a página, a lista volta para o estado inicial definido em **lista.txt**.
+
+
+
+
+
